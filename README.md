@@ -1,5 +1,8 @@
 # Fast-Food-Inc
 
-here is the link to the git pages i had created before the changes.
+Here is the link to the Gh-pages
+
+https://nicholusmuwonge.github.io/Fast-Food-Inc/.
+
 
 
