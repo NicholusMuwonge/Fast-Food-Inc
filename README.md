@@ -2,7 +2,8 @@
 
 Here is the link to the Gh-pages
 
-https://nicholusmuwonge.github.io/Fast-Food-Inc/.
+https://nicholusmuwonge.github.io/Fast-Food-Inc/User Interface/index.html
+
 
 
 
