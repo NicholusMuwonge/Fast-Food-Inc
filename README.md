@@ -1,10 +1,8 @@
 # Fast-Food-Inc
 
-<div><h1>Here is the link to the Gh-pages</h1></div>
+<div><h1>Fast Foods Inc </h1></div>
 
-<h1>Fast Foods Inc </h1>
-
-<h2>Project Overview</h2>
+<strong><h2>Project Overview</h2><strong>
 
 <p>Fast-Food-Fast is a food delivery service app for a restaurant. <p>
 <h3><em><b>Required Features</b> </em> </h3>
@@ -23,6 +21,6 @@
 <tr><td> A user should be able to see a history of ordered food </li> </td></tr>
 </table>
 
-<strong>  UI templates hosted at https://nicholusmuwonge.github.io/Fast-Food-Inc/UI/    </strong>
+<strong>  UI templates hosted <a href=https://nicholusmuwonge.github.io/Fast-Food-Inc/UI/> Here </a> </strong>
 
 
