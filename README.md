@@ -1,5 +1,7 @@
 Build Status
 [![Build Status](https://travis-ci.org/NicholusMuwonge/Fast-Food-Inc.svg?branch=master)](https://travis-ci.org/NicholusMuwonge/Fast-Food-Inc)
+Code Coverage
+<a href="https://codeclimate.com/github/NicholusMuwonge/Fast-Food-Inc/test_coverage"><img src="https://api.codeclimate.com/v1/badges/3976838667a6ac2b9b8b/test_coverage" /></a>
 
 <h1>Fast Foods</h1>
 <h2>Project Overview</h2>
