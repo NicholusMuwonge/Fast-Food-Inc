@@ -1,4 +1,5 @@
-https://travis-ci.org/NicholusMuwonge/Fast-Food-Inc.svg?branch=master
+Build Status
+[![Build Status](https://travis-ci.org/NicholusMuwonge/Fast-Food-Inc.svg?branch=master)](https://travis-ci.org/NicholusMuwonge/Fast-Food-Inc)
 
 <h1>Fast Foods</h1>
 <h2>Project Overview</h2>
