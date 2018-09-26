@@ -12,3 +12,14 @@ script: python test_api.py
 
 virtualenv: 
   system_site_packages:true
+
+env:
+  global:
+    - CC_TEST_REPORTER_ID=901cf725d03e708d67f56890821bbd6ef959a78b647c1abda21abbc281c23036
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+  
+  after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
