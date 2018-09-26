@@ -2,6 +2,7 @@
 <h2>Project Overview</h2>
 Fast-Food-Fast is a food delivery service app for a restaurant.
 <em>Required Features </em>
+
 1. Users can create an account and log in <br/>
 2. A user should be able to order for food <br/>
 3. The admin should be able to add,edit or delete the fast-food items <br/>
