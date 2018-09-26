@@ -20,5 +20,5 @@ Build Status
 <tr><td> A user should be able to see a history of ordered food </li> </td></tr>
 </table>
 
-<strong>  UI templates hosted at https://nicholusmuwonge.github.io/Fast-Food-Inc/UI/    </strong>
+<strong>  UI templates hosted here <a href=https://nicholusmuwonge.github.io/Fast-Food-Inc/UI/> here </a>   </strong>
 
