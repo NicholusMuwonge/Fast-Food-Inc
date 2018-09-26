@@ -1,6 +1,6 @@
 <h1>Fast Foods</h1>
 <h2>Project Overview</h2>
-Fast-Food-Fast is a food delivery service app for a restaurant.
+Fast-Food-Fast is a food delivery service app for a restaurant. <br/>
 <em><b>Required Features</b> </em> <br/>
 
 1. Users can create an account and log in <br/>
