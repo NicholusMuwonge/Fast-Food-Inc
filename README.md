@@ -11,7 +11,8 @@ Build Status
 <li> A user should be able to order for food </li>
 <li> The admin should be able to add,edit or delete the fast-food items </li>
   <li> The admin should be able to see a list of fast-food items </li>
-<li> The Admin user should be able to do the following: </ol>
+<li> The Admin user should be able to do the following: 
+</ol>
 
 <table> <tr><td> See a list of orders </td></tr>
 <tr><td> Accept and decline orders </td></tr>
