@@ -1,14 +1,5 @@
-<<<<<<< HEAD
-# Fast-Food-Inc
+https://travis-ci.org/NicholusMuwonge/Fast-Food-Inc.svg?branch=master
 
-Here is the link to the Gh-pages
-
-https://nicholusmuwonge.github.io/Fast-Food-Inc/UI/
-
-
-
-
-=======
 <h1>Fast Foods</h1>
 <h2>Project Overview</h2>
 Fast-Food-Fast is a food delivery service app for a restaurant. <br/>
