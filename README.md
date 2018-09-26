@@ -1,7 +1,5 @@
 # Fast-Food-Inc
 
-<div><h1>Fast Foods Inc </h1></div>
-
 <strong><h2>Project Overview</h2><strong>
 
 <p>Fast-Food-Fast is a food delivery service app for a restaurant. <p>
