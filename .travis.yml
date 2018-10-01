@@ -15,5 +15,6 @@ branches:
   - master
   - ft-challenge-two
   - develop
+  - /.*/
 
 
