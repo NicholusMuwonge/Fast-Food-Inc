@@ -3,57 +3,57 @@ import flask
 
 class Databaseconnection:
     def __init__(self):
+            self.connection=psycopg2.connect("dbname='postgres' user='postgres' host='localhost' password='admin123'")
+            self.connection.autocommit=True
+            self.cur= self.connection.cursor()
 
-        # try:
-            
-            def create_tables(self):
 
-                """ create tables in the PostgreSQL database"""
+    def create_tables(self):
+        """ create tables in the PostgreSQL database"""
 
-                commands = (
+        commands = (
                     """
-                    CREATE TABLE MENU (
+                    CREATE TABLE IF NOT EXIST MENU (
                         Item_id SERIAL PRIMARY KEY,
                         Item VARCHAR(255) NOT NULL,
                         Price VARCHAR(255) NOT NULL
-                    )
-                    """,
-                    """CREATE TABLE UserHistory(
-                            user_id SERIAL PRIMARY KEY,
-                            order_quantity VARCHAR(255) NOT NULL,
-                            order_status VARCHAR(255) NOT NULL
-                            
-                            )
-                    """,
+                    )""")
+
+        self.cur.execute(commands)
+
+    def create_user(self):
+        """ create tables in the PostgreSQL database"""
+
+        commands1 = (
                     """
-                    CREATE TABLE userhistory (
-                            part_id SERIAL PRIMARY KEY,
-                            file_extension VARCHAR(5) NOT NULL,
-                            drawing_data BYTEA NOT NULL
-                  E
-                    )
-                    """,
+                    CREATE TABLE IF NOT EXIST users (
+                        user_id SERIAL PRIMARY KEY,
+                        username VARCHAR(255) NOT NULL,
+                        usermail VARCHAR(255) NOT NULL,
+                        userpassword VARCHAR(255) NOT NULL
+                    )""")
+                    
+        self.cur.execute(commands1) 
+
+
+
+    def create_userhistory(self):
+        """ create tables in the PostgreSQL database"""
+
+        commands2 = (
                     """
-                    CREATE TABLE vendor_parts (
-                            vendor_id SERIAL NOT NULL,
-                            part_id SERIAL NOT NULL,
-                            PRIMARY KEY (vendor_id )
-                            
-                    )
-                    """)
-            conn = None
-        except:
-           print("its okay")
-    
-        for command in commands:
-                cur.execute(command)
-        # close communication with the PostgreSQL database server
-                cur.close()
-        # commit the changes
-                conn.commit()
-        else:
-            print("error")     
-  
-if __name__ == '__main__':
-    create_tables()
+                    CREATE TABLE IF NOT EXIST users (
+                        user_id SERIAL PRIMARY KEY,
+                        username VARCHAR(255) NOT NULL,
+                        usermail VARCHAR(255) NOT NULL,
+                        userpassword VARCHAR(255) NOT NULL
+                    )""")
+                    
+        self.cur.execute(commands2)         
+            
+
+
+
+                    
+               
 
