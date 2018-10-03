@@ -13,7 +13,7 @@ class Databaseconnection:
 
         commands = (
                     """
-                    CREATE TABLE IF NOT EXIST MENU (
+                    CREATE TABLE IF NOT EXISTS MENU (
                         Item_id SERIAL PRIMARY KEY,
                         Item VARCHAR(255) NOT NULL,
                         Price VARCHAR(255) NOT NULL
@@ -26,7 +26,7 @@ class Databaseconnection:
 
         commands1 = (
                     """
-                    CREATE TABLE IF NOT EXIST users (
+                    CREATE TABLE IF NOT EXISTS users (
                         user_id SERIAL PRIMARY KEY,
                         username VARCHAR(255) NOT NULL,
                         usermail VARCHAR(255) NOT NULL,
@@ -40,16 +40,30 @@ class Databaseconnection:
     def create_userhistory(self):
         """ create tables in the PostgreSQL database"""
 
-        commands2 = (
+        users = (
                     """
-                    CREATE TABLE IF NOT EXIST users (
+                    CREATE TABLE IF NOT EXISTS user_history (
                         user_id SERIAL PRIMARY KEY,
-                        username VARCHAR(255) NOT NULL,
-                        usermail VARCHAR(255) NOT NULL,
-                        userpassword VARCHAR(255) NOT NULL
+                        item_ordered VARCHAR(255) NOT NULL,
+                        order_quantity VARCHAR(255) NOT NULL,
+                        Order_status VARCHAR(255) NOT NULL
                     )""")
                     
-        self.cur.execute(commands2)         
+        self.cur.execute(users)
+
+    def adminstrator(self):
+        """ create tables in the PostgreSQL database"""
+
+        admin_history = (
+                    """
+                    CREATE TABLE IF NOT EXISTS user_history_admin (
+                        user_id SERIAL PRIMARY KEY,
+                        item_ordered VARCHAR(255) NOT NULL,
+                        order_quantity VARCHAR(255) NOT NULL,
+                        Order_status VARCHAR(255) NOT NULL
+                    )""")
+                    
+        self.cur.execute(admin_history)             
             
 
 
