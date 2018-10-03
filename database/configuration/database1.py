@@ -1,14 +1,15 @@
 import psycopg2
 import flask
 
+
 class Databaseconnection:
     def __init__(self):
-            self.connection=psycopg2.connect("dbname='postgres' user='postgres' host='localhost' password='admin123'")
+            self.connection=psycopg2.connect("dbname='postgre' user='postgres' host='localhost' password='admin123'")
             self.connection.autocommit=True
             self.cur= self.connection.cursor()
 
-
     def create_tables(self):
+
         """ create tables in the PostgreSQL database"""
 
         commands = (

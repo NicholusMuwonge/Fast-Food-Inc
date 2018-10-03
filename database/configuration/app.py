@@ -1,10 +1,12 @@
 from flask import Flask
 from database1 import Databaseconnection
+# from database.controllers.controllers1 import methods
+
 db=Databaseconnection()
-# db.create_tables()
+db.create_tables()
 # db.create_userhistory()
 # db.create_user
-db.adminstrator()
+# db.adminstrator()
 
 app = Flask(__name__)
 
@@ -12,4 +14,5 @@ app = Flask(__name__)
 
 if __name__=="__main__":
     app.run(debug=True)
+
 
