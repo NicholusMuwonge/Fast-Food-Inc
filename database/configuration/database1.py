@@ -1,18 +1,19 @@
 import psycopg2
-import flask
+from flask import app,make_response, jsonify,abort,request
 
 
 class Databaseconnection:
     def __init__(self):
-            self.connection=psycopg2.connect("dbname='postgre' user='postgres' host='localhost' password='admin123'")
+            self.connection=psycopg2.connect("dbname='My_fast_food_inc' user='postgres' host='localhost' password='admin123'")
             self.connection.autocommit=True
             self.cur= self.connection.cursor()
+            
 
     def create_tables(self):
 
         """ create tables in the PostgreSQL database"""
 
-        commands = (
+        self.cur.execute(
                     """
                     CREATE TABLE IF NOT EXISTS MENU (
                         Item_id SERIAL PRIMARY KEY,
@@ -20,12 +21,15 @@ class Databaseconnection:
                         Price VARCHAR(255) NOT NULL
                     )""")
 
-        self.cur.execute(commands)
+    
+     
+
+       
 
     def create_user(self):
         """ create tables in the PostgreSQL database"""
 
-        commands1 = (
+        self.cur.execute(
                     """
                     CREATE TABLE IF NOT EXISTS users (
                         user_id SERIAL PRIMARY KEY,
@@ -34,14 +38,14 @@ class Databaseconnection:
                         userpassword VARCHAR(255) NOT NULL
                     )""")
                     
-        self.cur.execute(commands1) 
+        
 
 
 
     def create_userhistory(self):
         """ create tables in the PostgreSQL database"""
 
-        users = (
+        self.cur.execute(
                     """
                     CREATE TABLE IF NOT EXISTS user_history (
                         user_id SERIAL PRIMARY KEY,
@@ -50,12 +54,12 @@ class Databaseconnection:
                         Order_status VARCHAR(255) NOT NULL
                     )""")
                     
-        self.cur.execute(users)
+        
 
     def adminstrator(self):
         """ create tables in the PostgreSQL database"""
 
-        admin_history = (
+        self.cur.execute(
                     """
                     CREATE TABLE IF NOT EXISTS user_history_admin (
                         user_id SERIAL PRIMARY KEY,
@@ -64,7 +68,7 @@ class Databaseconnection:
                         Order_status VARCHAR(255) NOT NULL
                     )""")
                     
-        self.cur.execute(admin_history)             
+                   
             
 
 
