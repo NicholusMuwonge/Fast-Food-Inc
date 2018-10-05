@@ -1,16 +1,17 @@
 import unittest, json
 from application import app 
-from application import Blueprint 
+from flask import Blueprint 
 from application.users.routes import db
 import flask
 
+test = Blueprint('test',__name__) 
+
 class Test_auth(unittest.TestCase):
-    @classmethod
+    @classmethod #runs the function like its independent of the class.
     def setUpClass(self):
         print('SetUp')
         self.client = app.test_client()
         app.testing = True
-        test = flask.Blueprint('application.users.routes.db',__name__) 
         
     @classmethod
     def tearDownClass(self):
@@ -39,7 +40,7 @@ class Test_auth(unittest.TestCase):
             self.assertEqual(resp_register.status_code, 201)
             # registered user login
             response = self.client.post(
-                '/auth/login',
+                'v1/auth/login',
                 data=json.dumps(dict(
                     username = "nicholus",
                     password='123456'
@@ -123,7 +124,7 @@ class Test_auth(unittest.TestCase):
     def test_add_food_item_to_menu(self):
         """ Test for adding food item"""
         with self.client:
-            resp = self.client.post('/menu',data=json.dumps(
+            resp = self.client.post('v1/menu',data=json.dumps(
                        { "item_name":"hamburger", "item_price":200 } ),content_type='application/json')   
             rdata = json.loads(resp.data.decode())
             self.assertTrue(rdata['message'] == 'food item added' )

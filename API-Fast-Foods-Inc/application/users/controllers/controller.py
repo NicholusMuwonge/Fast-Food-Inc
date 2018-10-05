@@ -9,7 +9,7 @@ def handle_register():
     return 'done'
 
 def handle_sign_in():
-    data = request.json
+    data = request.json #request goes to the database, collects data and
     models_obj = models.DatabaseConnection()
     return models_obj.user_login(data.get('username'),data.get('password'))
 
